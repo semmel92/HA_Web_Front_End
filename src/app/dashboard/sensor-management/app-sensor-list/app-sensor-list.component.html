@@ -1,0 +1,32 @@
+<div class="container">
+  <!-- Tabelle -->
+  <table class="table">
+    <!-- Kopfzeile -->
+    <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Standort</th>
+      <th>Aktiv</th>
+      <th>Art</th>
+    </tr>
+    </thead>
+    <!-- Datenzeilen -->
+    <tbody>
+    <tr *ngFor="let sensor of paginatedSensors">
+      <td>{{ sensor.name }}</td>
+      <td>{{ sensor.standort }}</td>
+      <td>{{ sensor.aktiv ? 'Ja' : 'Nein' }}</td>
+      <td>{{ sensor.art }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Paginator -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      <li class="page-item" *ngFor="let page of [].constructor(Math.ceil(sensors.length / pageSize)); let i = index">
+        <a class="page-link" href="#" (click)="onPageChange(i)">{{ i + 1 }}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

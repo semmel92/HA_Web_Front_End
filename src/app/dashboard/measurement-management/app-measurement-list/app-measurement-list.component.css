@@ -1,0 +1,35 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thead-dark th {
+  background-color: palevioletred;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.page-link {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
